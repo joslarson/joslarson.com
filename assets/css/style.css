@@ -22,7 +22,7 @@ body {
   margin: 0; }
 
 /* HTML5 display definitions
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Correct `block` display not defined for any HTML5 element in IE 8/9.
  * Correct `block` display not defined for `details` or `summary` in IE 10/11
@@ -58,7 +58,7 @@ audio:not([controls]) {
   display: none; }
 
 /* Links
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Remove the gray background color from active links in IE 10.
  */
@@ -72,7 +72,7 @@ a:active, a:hover {
   outline: 0; }
 
 /* Text-level semantics
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
@@ -128,7 +128,7 @@ sub {
   bottom: -0.25em; }
 
 /* Embedded content
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Remove border when inside `a` element in IE 8/9/10.
  */
@@ -142,7 +142,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 /* Grouping content
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Address margin not present in IE 8/9 and Safari.
  */
@@ -171,7 +171,7 @@ code, kbd, pre, samp {
   font-size: 1em; }
 
 /* Forms
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Known limitation: by default, Chrome and Safari on OS X allow very limited
  * styling of `select`, unless a `border` property is set.
@@ -312,7 +312,7 @@ optgroup {
   font-weight: bold; }
 
 /* Tables
-   ========================================================================== */
+     ========================================================================== */
 /**
  * Remove most spacing between table cells.
  */
@@ -324,9 +324,9 @@ td, th {
   padding: 0; }
 
 /*
-    IMPORTANT: When making any changes to the icon font, be sure to increment
-    the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
-    This forces browsers to download the new font file.
+        IMPORTANT: When making any changes to the icon font, be sure to increment
+        the version number by 1 in the @font-face rule. `?v=1` becomes `?v=2`
+        This forces browsers to download the new font file.
 */
 @font-face {
   font-family: 'casperion';
@@ -387,8 +387,8 @@ td, th {
   content: "\e608"; }
 
 /* ==========================================================================
-   2. General - Setting up some base styles
-   ========================================================================== */
+     2. General - Setting up some base styles
+     ========================================================================== */
 html {
   height: 100%;
   max-height: 100%;
@@ -540,17 +540,19 @@ pre {
   margin: 0 0 1.75em 0;
   border: #E3EDF3 1px solid;
   width: 100%;
-  padding: 10px;
-  font-family: Inconsolata, monospace, sans-serif;
+  padding: 15px;
+  font-family: 'Source Code Pro Light', Inconsolata, monospace, sans-serif;
   font-size: 0.9em;
   white-space: pre;
   overflow: auto;
   background: #F7FAFB;
-  border-radius: 3px; }
+  border-radius: 3px;
+  line-height: 1.3;
+  word-wrap: normal; }
 
 pre code, pre tt {
   font-size: inherit;
-  white-space: pre-wrap;
+  white-space: pre;
   background: transparent;
   border: none;
   padding: 0; }
@@ -755,8 +757,8 @@ margin on the iframe, cause it breaks stuff. */
   padding: 1rem 0; }
 
 /* ==========================================================================
-   3. Utilities - These things get used a lot
-   ========================================================================== */
+     3. Utilities - These things get used a lot
+     ========================================================================== */
 /* Clears shit */
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -787,8 +789,8 @@ margin on the iframe, cause it breaks stuff. */
   vertical-align: middle; }
 
 /* ==========================================================================
-   4. General - The main styles for the the theme
-   ========================================================================== */
+     4. General - The main styles for the the theme
+     ========================================================================== */
 /* Big cover image on the home page */
 .main-header {
   position: relative;
@@ -799,8 +801,7 @@ margin on the iframe, cause it breaks stuff. */
   text-align: center;
   background: #222 no-repeat center center;
   background-size: cover;
-  overflow: hidden;
-  margin-top: 40px; }
+  overflow: hidden; }
 
 .main-header .inner {
   width: 80%; }
@@ -841,7 +842,7 @@ margin on the iframe, cause it breaks stuff. */
   animation: none; }
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
-   on photos which happen to have a light background. */
+     on photos which happen to have a light background. */
 .home-template .main-header:after {
   display: block;
   content: " ";
@@ -1038,7 +1039,7 @@ margin on the iframe, cause it breaks stuff. */
   word-wrap: break-word; }
 
 /* Add a little circle in the middle of the border-bottom on our .post
-   just for the lolz and stylepoints. */
+     just for the lolz and stylepoints. */
 .post:after {
   display: block;
   content: "";
@@ -1156,8 +1157,8 @@ body:not(.post-template) .post-title {
   padding-right: 5px; }
 
 /* ==========================================================================
-   5. Single Post - When you click on an individual post
-   ========================================================================== */
+     5. Single Post - When you click on an individual post
+     ========================================================================== */
 .post-template .post-header {
   margin-bottom: 3.4rem; }
 
@@ -1173,8 +1174,8 @@ body:not(.post-template) .post-title {
   border: none; }
 
 /* Stop elements, such as img wider than the post content, from
-  creating horizontal scroll - slight hack due to imperfections
-  with browser width % calculations and rounding */
+    creating horizontal scroll - slight hack due to imperfections
+    with browser width % calculations and rounding */
 .post-template .content {
   overflow: hidden; }
 
@@ -1195,9 +1196,9 @@ body:not(.post-template) .post-title {
   height: auto;
   padding: 0.6em 0;
   /* Centers an image by (1) pushing its left edge to the
-     center of its container and (2) shifting the entire image
-     in the opposite direction by half its own width.
-     Works for images that are larger than their containers. */
+         center of its container and (2) shifting the entire image
+         in the opposite direction by half its own width.
+         Works for images that are larger than their containers. */
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1221,7 +1222,7 @@ body:not(.post-template) .post-title {
   text-decoration: none; }
 
 /* Break out larger images to be wider than the main text column
-   the class is applied with jQuery */
+     the class is applied with jQuery */
 .post-content .full-img {
   width: 126%;
   max-width: none;
@@ -1271,9 +1272,9 @@ body:not(.post-template) .post-title {
   text-decoration: none; }
 
 /* Drop the share links in the space to the right.
-   Doing it like this means it's easier for the author bio
-   to be flexible at smaller screen sizes while the share
-   links remain at a fixed width the whole time */
+     Doing it like this means it's easier for the author bio
+     to be flexible at smaller screen sizes while the share
+     links remain at a fixed width the whole time */
 .post-footer .share {
   position: absolute;
   top: 6rem;
@@ -1334,8 +1335,8 @@ body:not(.post-template) .post-title {
   top: -33px; }
 
 /* ==========================================================================
-   6. Author profile
-   ========================================================================== */
+     6. Author profile
+     ========================================================================== */
 .post-head.main-header {
   height: 65vh;
   min-height: 180px; }
@@ -1448,13 +1449,13 @@ body:not(.post-template) .post-title {
   text-decoration: none; }
 
 /* Turn off meta for page2+ to make room for extra
-   pagination prev/next links */
+     pagination prev/next links */
 .archive-template .author-profile .author-meta {
   display: none; }
 
 /* ==========================================================================
-   8. Third Party Elements - Embeds from other services
-   ========================================================================== */
+     8. Third Party Elements - Embeds from other services
+     ========================================================================== */
 /* Github */
 .gist table {
   margin: 0;
@@ -1471,8 +1472,8 @@ body:not(.post-template) .post-title {
   margin-bottom: 1.75em; }
 
 /* ==========================================================================
-   8. Pagination - Tools to let you flick between pages
-   ========================================================================== */
+     8. Pagination - Tools to let you flick between pages
+     ========================================================================== */
 /* The main wrapper for our pagination links */
 .pagination {
   position: relative;
@@ -1650,8 +1651,8 @@ body:not(.post-template) .post-title {
   margin: 0; }
 
 /* ==========================================================================
-   9. Footer - The bottom of every page
-   ========================================================================== */
+     9. Footer - The bottom of every page
+     ========================================================================== */
 .site-footer {
   position: relative;
   margin: 8rem 0 0 0;
@@ -1749,15 +1750,15 @@ body:not(.post-template) .post-title {
 
 /*
 #search {
-  //position: relative;
-  .search-input {
-    color: $navbar-default-color;
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 3px;
-    margin: 0.2rem auto;
-    box-shadow: none;
-  }
+    //position: relative;
+    .search-input {
+        color: $navbar-default-color;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 3px;
+        margin: 0.2rem auto;
+        box-shadow: none;
+    }
 }
 */
 .search-clear-toggle {
@@ -1796,8 +1797,8 @@ body:not(.post-template) .post-title {
   padding: 10px 15px; }
 
 /* ==========================================================================
-   11. Media Queries - Smaller than 900px
-   ========================================================================== */
+     11. Media Queries - Smaller than 900px
+     ========================================================================== */
 @media only screen and (max-width: 900px) {
   blockquote {
     margin-left: 0; }
@@ -1877,8 +1878,8 @@ body:not(.post-template) .post-title {
     width: 70%; } }
 
 /* ==========================================================================
-   12. Media Queries - Smaller than 500px
-   ========================================================================== */
+     12. Media Queries - Smaller than 500px
+     ========================================================================== */
 @media only screen and (max-width: 500px) {
   .main-header {
     margin-bottom: 15px;
@@ -2033,8 +2034,8 @@ body:not(.post-template) .post-title {
     overflow-x: auto; } }
 
 /* ==========================================================================
-   12. Animations
-   ========================================================================== */
+     12. Animations
+     ========================================================================== */
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {
   0% {
@@ -2085,36 +2086,66 @@ body:not(.post-template) .post-title {
     -webkit-transform: translateY(-5px) rotate(-90deg);
     transform: translateY(-5px) rotate(-90deg); } }
 
-.hljs {
+hljs {
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
-  background: #f0f0f0;
+  color: #333;
   -webkit-text-size-adjust: none; }
 
-.hljs, .hljs-subst, .hljs-tag .hljs-title, .nginx .hljs-title {
-  color: black; }
-
-.hljs-string, .hljs-title, .hljs-constant, .hljs-parent, .hljs-tag .hljs-value, .hljs-rules .hljs-value, .hljs-preprocessor, .hljs-pragma, .haml .hljs-symbol, .ruby .hljs-symbol, .ruby .hljs-symbol .hljs-string, .hljs-template_tag, .django .hljs-variable, .smalltalk .hljs-class, .hljs-addition, .hljs-flow, .hljs-stream, .bash .hljs-variable, .apache .hljs-tag, .apache .hljs-cbracket, .tex .hljs-command, .tex .hljs-special, .erlang_repl .hljs-function_or_atom, .asciidoc .hljs-header, .markdown .hljs-header, .coffeescript .hljs-attribute {
-  color: #800; }
-
-.smartquote, .hljs-comment, .hljs-annotation, .hljs-template_comment, .diff .hljs-header, .hljs-chunk, .asciidoc .hljs-blockquote, .markdown .hljs-blockquote {
-  color: #888; }
-
-.hljs-number, .hljs-date, .hljs-regexp, .hljs-literal, .hljs-hexcolor, .smalltalk .hljs-symbol, .smalltalk .hljs-char, .go .hljs-constant, .hljs-change, .lasso .hljs-variable, .makefile .hljs-variable, .asciidoc .hljs-bullet, .markdown .hljs-bullet, .asciidoc .hljs-link_url, .markdown .hljs-link_url {
-  color: #080; }
-
-.hljs-label, .hljs-javadoc, .ruby .hljs-string, .hljs-decorator, .hljs-filter .hljs-argument, .hljs-localvars, .hljs-array, .hljs-attr_selector, .hljs-important, .hljs-pseudo, .hljs-pi, .haml .hljs-bullet, .hljs-doctype, .hljs-deletion, .hljs-envvar, .hljs-shebang, .apache .hljs-sqbracket, .nginx .hljs-built_in, .tex .hljs-formula, .erlang_repl .hljs-reserved, .hljs-prompt, .asciidoc .hljs-link_label, .markdown .hljs-link_label, .vhdl .hljs-attribute, .clojure .hljs-attribute, .asciidoc .hljs-attribute, .lasso .hljs-attribute, .coffeescript .hljs-property, .hljs-phony {
-  color: #88f; }
-
-.hljs-keyword, .hljs-id, .hljs-title, .hljs-built_in, .css .hljs-tag, .hljs-javadoctag, .hljs-phpdoc, .hljs-dartdoc, .hljs-yardoctag, .smalltalk .hljs-class, .hljs-winutils, .bash .hljs-variable, .apache .hljs-tag, .hljs-type, .hljs-typename, .tex .hljs-command, .asciidoc .hljs-strong, .markdown .hljs-strong, .hljs-request, .hljs-status {
-  font-weight: bold; }
-
-.asciidoc .hljs-emphasis, .markdown .hljs-emphasis {
+.hljs-comment, .diff .hljs-header {
+  color: #998;
   font-style: italic; }
 
-.nginx .hljs-built_in {
+.hljs-keyword, .css .rule .hljs-keyword, .hljs-winutils, .nginx .hljs-title, .hljs-subst, .hljs-request, .hljs-status {
+  color: #333;
+  font-weight: bold; }
+
+.hljs-number, .hljs-hexcolor, .ruby .hljs-constant {
+  color: #008080; }
+
+.hljs-string, .hljs-tag .hljs-value, .hljs-doctag, .tex .hljs-formula {
+  color: #d14; }
+
+.hljs-title, .hljs-id, .scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold; }
+
+.hljs-list .hljs-keyword, .hljs-subst {
   font-weight: normal; }
 
-.coffeescript .javascript, .javascript .xml, .lasso .markup, .tex .hljs-formula, .xml .javascript, .xml .vbscript, .xml .css, .xml .hljs-cdata {
-  opacity: 0.5; }
+.hljs-class .hljs-title, .hljs-type, .vhdl .hljs-literal, .tex .hljs-command {
+  color: #458;
+  font-weight: bold; }
+
+.hljs-tag, .hljs-tag .hljs-title, .hljs-rule .hljs-property, .django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal; }
+
+.hljs-attribute, .hljs-variable, .lisp .hljs-body, .hljs-name {
+  color: #008080; }
+
+.hljs-regexp {
+  color: #009926; }
+
+.hljs-symbol, .ruby .hljs-symbol .hljs-string, .lisp .hljs-keyword, .clojure .hljs-keyword, .scheme .hljs-keyword, .tex .hljs-special, .hljs-prompt {
+  color: #990073; }
+
+.hljs-built_in {
+  color: #0086b3; }
+
+.hljs-preprocessor, .hljs-pragma, .hljs-pi, .hljs-doctype, .hljs-shebang, .hljs-cdata {
+  color: #999;
+  font-weight: bold; }
+
+.hljs-deletion {
+  background: #fdd; }
+
+.hljs-addition {
+  background: #dfd; }
+
+.diff .hljs-change {
+  background: #0086b3; }
+
+.hljs-chunk {
+  color: #aaa; }
+

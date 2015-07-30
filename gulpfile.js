@@ -1,6 +1,7 @@
 // Load Gulp Plugins
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    sourcemaps = require('gulp-sourcemaps'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     jshint = require('gulp-jshint'),
@@ -13,7 +14,8 @@ var gulp = require('gulp'),
 
 // Styles
 gulp.task('styles', function() {
-    return gulp.src('src/assets/css/main.scss')
+    return gulp.src('src/assets/css/style.scss')
+        .pipe(sourcemaps.init())
         //.pipe(sass({ style: 'expanded' }))
         //.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
         //.pipe(gulp.dest('assets/css'))
@@ -21,11 +23,11 @@ gulp.task('styles', function() {
         //.pipe(minifycss())
 
         .pipe(sass({style: 'expanded', quiet: true, cacheLocation: '.sass-cache'}))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('assets/css'))
-        .pipe(minifycss({keepSpecialComments: 0}))
-        .pipe(rename({suffix: '.min'}))
-
-        .pipe(gulp.dest('assets/css'))
+        //.pipe(minifycss({keepSpecialComments: 0}))
+        //.pipe(rename({suffix: '.min'}))
+        //.pipe(gulp.dest('assets/css'))
         .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -34,7 +36,7 @@ gulp.task('scripts', function() {
         'src/assets/js/**/*.js'])
         //.pipe(jshint('.jshintrc'))
         //.pipe(jshint.reporter('default'))
-        .pipe(concat('casperion.js'))
+        .pipe(concat('script.js'))
         .pipe(gulp.dest('assets/js'))
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
