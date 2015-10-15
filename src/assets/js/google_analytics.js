@@ -8,5 +8,5 @@
     a.src = g;
     m.parentNode.insertBefore(a, m)
 })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-ga('create', casperionConfig.google_analytics_tracking_id, 'auto');
+ga('create', mainConfig.google_analytics_tracking_id, 'auto');
 ga('send', 'pageview');
